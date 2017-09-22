@@ -1,0 +1,24 @@
+ //find nth term from given 2 values of series
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+		Scanner sc = new Scanner(System.in);
+	int tests = sc.nextInt();
+
+	for (int i=0; i< tests; i++)
+	{
+	        int a = sc.nextInt(); 
+	        int b = sc.nextInt();
+            double r = b * 1.0 /a; 
+            int n = sc.nextInt();
+            double x = a*(Math.pow(r , (n-1))); // t = a * r ^(n-1)
+            System.out.println(Math.floor(x)); // returns largest value less than or equal to arguement
+    }
+}
+}
