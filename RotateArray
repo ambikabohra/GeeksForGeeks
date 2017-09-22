@@ -1,6 +1,7 @@
 public class RotateArray {
 
-/* copy starting d elemnets from given array 
+/* copy starting 'd' elemnets from given array 
+in temp array, shift array one by one */
 
 	void rotateByd(int arr[], int d, int n)
 	{
@@ -13,7 +14,7 @@ public class RotateArray {
 		for(i=0; i<(n-d) ; i++)
 			arr[i] = arr[i+d];
 		for(int k=0; (k< temp.length) && (i< (n)); k++)
-    {
+    		{
 			arr[i] = temp [k];
 			i++;
 		}
