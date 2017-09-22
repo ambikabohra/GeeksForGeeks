@@ -1,0 +1,34 @@
+public class RotateArray {
+
+/* copy starting d elemnets from given array 
+
+	void rotateByd(int arr[], int d, int n)
+	{
+		int temp[] = new int[d];
+		int j =0;
+		for(j =0; j<d; j++)
+			temp[j] = arr[j];
+
+		int i =0;
+		for(i=0; i<(n-d) ; i++)
+			arr[i] = arr[i+d];
+		for(int k=0; (k< temp.length) && (i< (n)); k++)
+    {
+			arr[i] = temp [k];
+			i++;
+		}
+	}
+
+	public static void main(String args[])
+	{
+		RotateArray rotate = new RotateArray();
+		int arr[] = {1, 2, 4, 5, 7, 9, 65, 34};
+		rotate.rotateByd(arr, 3, arr.length);
+		for(int i=0; i< arr.length; i++)
+			System.out.print(arr[i] + " ");
+	}
+}
+
+
+
+// output = 5 7 9 65 34 1 2 4 
