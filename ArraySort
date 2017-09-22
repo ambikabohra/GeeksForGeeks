@@ -1,0 +1,39 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class ArraySort {
+
+	public static void main (String[] args) {
+		//code
+		Scanner sc = new Scanner(System.in);
+		int tests = sc.nextInt();
+
+		while (tests != 0  )
+		{
+			int size =sc.nextInt();
+			int[] arr =new int[size];
+			for(int j =0; j< size; j++)
+			{
+				arr[j] = sc.nextInt();
+			}
+
+			Arrays.sort(arr);
+			for(int k =0; k< size; k++)
+			{
+				System.out.print (arr[k] + " ");
+			}
+			tests--;
+			System.out.println();
+		}
+	}
+}
+
+/** Example:
+Input:
+1
+2
+3 1
+
+Output:
+1 3 .   **/
