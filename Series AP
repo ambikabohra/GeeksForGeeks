@@ -1,0 +1,45 @@
+/**
+Given the first 2 terms of Arithmetic Series tell the nth term of the series. 
+
+Input:
+First line contains an integer, the number of test cases 'T'. Each test case in its first line should contain two positive integer a and b(First 2 terms of AP). In the second line of every test case it contains of an integer N.
+
+Output:
+In each seperate line print the Nth term of the Arithmetic Progression.
+
+Example:
+Input:
+2
+2 3
+4
+1 2
+10
+
+Output:
+5
+10
+**/
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+	Scanner sc = new Scanner(System.in);
+	int tests = sc.nextInt();
+
+	for (int i=0; i< tests; i++)
+	{
+	        int a = sc.nextInt(); 
+	        int b = sc.nextInt();
+            int d = b-a; // DIFFERENCE for formula
+            
+            int n = sc.nextInt();
+            
+            System.out.println( a + (n - 1) * d );
+	    
+	}
+	}
+}
