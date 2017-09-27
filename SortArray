@@ -1,0 +1,46 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		//code
+				Scanner sc = new Scanner(System.in);
+		int tests = sc.nextInt();
+        int size ;
+		while (tests != 0  )
+		{
+		    size = sc.nextInt();
+		    int[] arr = new int[size];
+		    for(int k=0; k< size; k++)
+		        arr[k] = sc.nextInt();
+		    Arrays.sort(arr);
+	        for( int j=0; j< arr.length; j++)
+	            System.out.print(arr[j] + " ");
+	        System.out.println();
+		    tests--;
+		}
+	}
+}
+
+
+Example:
+
+Input:
+The first line contains an integer 'T' denoting the total number of test cases. In each test cases, 
+First line is number of elements in array 'N' and second its values.
+
+Output: 
+Print the sorted array of 0's, 1's and 2's.
+
+Input :
+2
+5
+0 2 1 2 0
+3
+0 1 0
+ 
+Output:
+
+0 0 1 2 2
+0 0 1
