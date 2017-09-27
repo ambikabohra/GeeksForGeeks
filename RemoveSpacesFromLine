@@ -1,0 +1,31 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class GFG {
+	public static void main (String[] args)throws IOException {
+	//	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		Scanner sc = new Scanner(System.in);
+    	int tasks=Integer.parseInt(sc.nextLine());
+    	
+    	while(tasks-- > 0)
+    	    System.out.println(sc.nextLine().replace(" ",""));
+	}
+}
+
+
+Input: First line of the input is the number of test cases T. And first line of test case contains a string whose spaces are to be removed.
+
+Output:  Modified string without any space
+
+Constraints:  Input String Length <= 1000
+
+Example:
+Input:
+2
+geeks  for geeks
+    g f g
+
+Output:
+geeksforgeeks
+gfg
