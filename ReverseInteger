@@ -1,0 +1,20 @@
+
+
+class Solution {
+    public int reverse(int x) {
+
+        int newint =0;
+        while(x != 0)
+        {
+            int ch = x%10;     
+            int result = newint*10 + (ch);
+            if ((result - ch) / 10 != newint) //for checking overflow 
+            { 
+                return 0; 
+            }
+            newint = result;
+            x = x/10;
+        }      
+        return newint;
+    }
+}
