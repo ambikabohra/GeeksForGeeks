@@ -1,0 +1,58 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n1 = in.nextInt();
+        int n2 = in.nextInt();
+        int n3 = in.nextInt();
+        Queue<Integer> h1 = new LinkedList<Integer>(); //First stack of cylinders
+        Queue<Integer> h2 = new LinkedList<Integer>(); //Second stack of cylinders
+        Queue<Integer> h3 = new LinkedList<Integer>(); //Third stack of cylinders
+       
+        
+        int sum1 = 0, sum2 = 0, sum3 = 0;
+        for(int i=0; i < n1; i++){
+            int cylinder = in.nextInt();
+            h1.add(cylinder);
+            sum1 += cylinder;
+        }
+        
+        for(int i=0; i < n2; i++){
+            int cylinder = in.nextInt();
+            h2.add(cylinder);
+            sum2 += cylinder;
+        }
+        
+        for(int i=0; i < n3; i++){
+            int cylinder = in.nextInt();
+            h3.add(cylinder);
+            sum3 += cylinder;
+        }
+        
+       while((sum1 != sum2) ||( sum2 != sum3))
+       {
+           if((sum1 >= sum2) && (sum1 >= sum3) ) 
+             {
+                sum1 -= h1.remove();
+             }
+            else if((sum2 >= sum1) && (sum2 >= sum3) ) 
+            {
+                sum2 -= h2.remove(); 
+                }
+            else if((sum3 >= sum1) && (sum3 >= sum2) ) 
+            {
+             sum3 -= h3.remove(); 
+              }
+           
+       }
+       System.out.println(sum1);
+        
+    }
+ 
+}
